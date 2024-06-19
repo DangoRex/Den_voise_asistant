@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Голосовой Помощник Дэн</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap">
+</head>
+<body>
+    <header>
+        <div class="top-section">
+            <div class="logo">
+                <img src="logo.png" alt="Логотип">
+            </div>
+            <div class="description">
+                <h1>Голосовой Помощник Дэн</h1>
+                <p>Дэн - это голосовой помощник, который поможет вам справляться с повседневными задачами.<br>У него есть настроение и в зависимости от него будут отличаться формулировки ответов)</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="version-and-download">
+            <button class="info-button" onclick="showSystemRequirements()">?</button>
+            <select id="versionDropdown" onchange="updateVersionInfo()">
+                <option value="0.0.0">Выберите версию</option>
+                <option value="1.0.0">Версия 1.0.0</option>
+				<option value="1.1.0">Версия 1.1.0</option>
+            </select>
+            <button class="download-button" onclick="download()">Скачать</button>
+        </div>
+        <div class="separator"></div>
+        <div class="version-info" id="versionInfo">
+            <p>Выберите версию из списка, чтобы увидеть информацию.</p>
+        </div>
+    </main>
+
+    <!-- Модальное окно для системных требований -->
+    <div id="systemRequirementsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSystemRequirements()">&times;</span>
+            <div id="systemRequirements">
+                <h2>Системные требования</h2>
+                <p>Минимальные системные требования:</p>
+                <ul id="requirementsList">
+                    <!-- Системные требования будут добавляться сюда -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
