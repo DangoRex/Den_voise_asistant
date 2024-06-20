@@ -21,7 +21,7 @@ function updateVersionInfo() {
             break;
         default:
             infoText = 'Выберите версию из списка, чтобы увидеть информацию.';
-            requirementsText = '<p>Выберите версию';
+            requirementsText = '<p>Выберите версию</ul>';
             break;
     }
 
@@ -36,7 +36,7 @@ function download() {
     const downloadLinks = {
         '1.0.0': 'https://drive.google.com/uc?export=download&id=1Y39qZnnwqASSP_54nF6Em-BGTpB07rb4',
         '1.1.0': 'https://drive.google.com/uc?export=download&id=1p1k8ikYe1dVmLPDnxRACeqoS8pSEv580',
-        '2.0.0': 'https://drive.google.com/uc?export=download&id=ID_ДЛЯ_ВЕРСИИ_1.2.0'  // Укажите правильный ID для версии 1.2.0
+        '2.0.0': 'https://drive.google.com/uc?export=download&id=16YaDbKzCNOhIcX1naFHwhzd_z5ahbEBg'
     };
 
     const downloadLink = downloadLinks[selectedVersion] || '#';
