@@ -21,7 +21,7 @@ function updateVersionInfo() {
             break;
         default:
             infoText = 'Выберите версию из списка, чтобы увидеть информацию.';
-            requirementsText = '<p>Выберите версию</ul>';
+            requirementsText = '<p>Минимальные системные требования:</p><ul><li>Операционная система: Windows</li><li>Оперативная память: 6,3 MБ</li><li>Место на диске: 2,8 ГБ</li><li>Микрофон</li><li>Динамик</li></ul>';
             break;
     }
 
