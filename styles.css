@@ -10,7 +10,7 @@ body {
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-image: url('background-image.png'); /* Добавление фонового изображения */
+    background-image: url('images/background-image.png'); /* Добавление фонового изображения */
     background-size: cover; /* Масштабирование изображения по размеру окна */
     background-position: center; /* Центрирование изображения */
     animation: fadeInBackground 2s ease-in-out; /* Плавное появление фона */
@@ -107,6 +107,7 @@ main {
     flex-direction: column;
     width: 80%;
     justify-content: space-between;
+    flex-grow: 1; /* Расширение main до заполнения доступного пространства */
 }
 
 .separator {
@@ -166,7 +167,7 @@ main {
 }
 
 footer {
-    background-color: #000000; /* Черный цвет фона */
+    background-color: transparent; /* Прозрачный фон */
     color: #f5f5dc; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     padding: 10px 0; /* Внутренние отступы */
