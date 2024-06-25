@@ -3,7 +3,7 @@
 body {
     background-color: #000000; /* Черный фон */
     color: #f5f5dc; /* Бежевый цвет текста */
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
