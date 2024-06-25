@@ -167,7 +167,6 @@ main {
 }
 
 footer {
-    background-color: transparent; /* Прозрачный фон */
     color: #f5f5dc; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     padding: 10px 0; /* Внутренние отступы */
