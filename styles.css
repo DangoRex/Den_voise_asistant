@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
-
+ 
 body {
-    background-color: #000000; /* Черный фон */
-    color: #f5f5dc; /* Бежевый цвет текста */
-    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #f5f5dc;
+    font-family: 'Comic Sans MS', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-image: url('images/background-image.png'); /* Добавление фонового изображения */
-    background-size: cover; /* Масштабирование изображения по размеру окна */
-    background-position: center; /* Центрирование изображения */
-    animation: fadeInBackground 2s ease-in-out; /* Плавное появление фона */
+    background-image: url('background-image.png');
+    background-size: cover;
+    background-position: center;
+    animation: fadeInBackground 2s ease-in-out;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
     align-items: center;
     width: 80%;
     margin-bottom: 20px;
-    animation: slideInFromTop 1s ease-in-out; /* Анимация появления заголовка сверху */
+    animation: slideInFromTop 1s ease-in-out;
 }
 
 .top-section {
@@ -30,77 +30,58 @@ header {
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in-out; /* Плавное появление верхней секции */
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .logo {
-    width: 200px; /* Увеличенный размер контейнера логотипа */
-    height: 200px;
-    border: 3px solid #202020; /* Цвет обводки логотипа */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px; /* Немного закругленные углы */
-    overflow: hidden; /* Скрытие выходящих за границы частей изображения */
-    animation: bounceIn 2s ease-in-out; /* Анимация появления логотипа с прыжком */
+    flex: 0 0 auto;
+    margin-right: 20px;
+    animation: bounceIn 2s ease-in-out;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .description {
-    margin-left: 20px;
-    animation: fadeIn 2s ease-in-out; /* Плавное появление описания */
+    flex: 1;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .version-and-download {
     display: flex;
-    justify-content: flex-end; /* Выравнивание по правому краю */
     align-items: center;
-    width: 100%;
     margin-bottom: 20px;
-    animation: fadeIn 2.5s ease-in-out; /* Плавное появление версии и кнопки */
 }
 
-.version-and-download select {
-    background-color: #202020; /* Цвет фона списка версий */
-    color: #f5f5dc; /* Бежевый цвет текста */
-    border: 1px solid #444;
-    padding: 5px;
-    margin-left: 10px; /* Отступ слева от выпадающего списка */
-}
-
+.info-button,
 .download-button {
-    background-color: #0050fa; /* Синий цвет кнопки */
-    color: #fff;
+    background-color: #006400;
+    color: #f5f5dc;
     border: none;
     padding: 10px 20px;
+    margin-right: 10px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5px;
     transition: background-color 0.3s;
-    margin-right: 10px; /* Отступ справа от кнопки */
+    animation: fadeIn 2.5s ease-in-out;
 }
 
+.info-button:hover,
 .download-button:hover {
-    background-color: #005500; /* Зеленый цвет кнопки при наведении */
+    background-color: #005500;
 }
 
-.info-button {
-    background-color: #333333; /* Темный цвет кнопки */
-    color: #fff;
+select {
+    background-color: #006400;
+    color: #f5f5dc;
     border: none;
     padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 5px; /* Квадратная форма с немного закругленными углами */
-    font-size: 18px;
-    transition: background-color 0.3s;
-    margin-right: 10px; /* Отступ справа от кнопки */
-}
-
-.info-button:hover {
-    background-color: #005500; /* Зеленый цвет кнопки при наведении */
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 main {
@@ -115,39 +96,38 @@ main {
     height: 1px;
     background-color: #444;
     margin-bottom: 20px;
-    animation: fadeIn 3s ease-in-out; /* Плавное появление разделителя */
+    animation: fadeIn 3s ease-in-out;
 }
 
 .version-info {
     width: 100%;
-    background-color: #202020; /* Цвет фона окна информации */
+    background-color: #202020;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    color: #f5f5dc; /* Бежевый цвет текста */
-    animation: fadeIn 3.5s ease-in-out; /* Плавное появление информации */
-    overflow: auto; /* Автоматическая прокрутка при переполнении */
+    color: #f5f5dc;
+    animation: fadeIn 3.5s ease-in-out;
+    overflow: auto;
 }
 
-/* Модальное окно */
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Остается на одном месте */
-    z-index: 1; /* Слой поверх всего */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Включение прокрутки при необходимости */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #202020;
-    margin: 15% auto; /* 15% от верха и центрирование по горизонтали */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ширина модального окна */
+    width: 80%;
     border-radius: 10px;
     color: #f5f5dc;
 }
@@ -167,23 +147,23 @@ main {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
-    color: #f5f5dc; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    padding: 10px 0; /* Внутренние отступы */
-    position: fixed; /* Фиксация внизу экрана */
-    width: 100%; /* Ширина в 100% */
-    bottom: 0; /* Позиционирование внизу */
-    z-index: 1; /* Обеспечение верхнего слоя для footer */
+    background-color: rgba(0, 0, 0, 0);
+    color: #f5f5dc;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
 }
 
 footer a {
-    color: #0050fa; /* Цвет ссылок */
-    text-decoration: none; /* Убрать подчеркивание */
+    color: #0050fa;
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
 /* Анимации */
