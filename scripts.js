@@ -49,14 +49,13 @@ function download() {
 }
 
 function showSystemRequirements() {
-    var modal = document.getElementById("systemRequirementsModal");
-    modal.style.display = "block";
+    document.getElementById('systemRequirementsModal').style.display = 'block';
 }
 
 function closeSystemRequirements() {
-    var modal = document.getElementById("systemRequirementsModal");
-    modal.style.display = "none";
+    document.getElementById('systemRequirementsModal').style.display = 'none';
 }
+
 
 // Закрытие модального окна при клике вне его
 window.onclick = function(event) {
