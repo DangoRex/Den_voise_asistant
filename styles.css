@@ -10,7 +10,7 @@ body {
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-image: url('images/background-image.png'); /* Добавление фонового изображения */
+    background-image: url('background-image.png'); /* Добавление фонового изображения */
     background-size: cover; /* Масштабирование изображения по размеру окна */
     background-position: center; /* Центрирование изображения */
     animation: fadeInBackground 2s ease-in-out; /* Плавное появление фона */
