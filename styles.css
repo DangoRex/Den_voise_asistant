@@ -3,7 +3,7 @@
 body {
     background-color: #000000; /* Черный фон */
     color: #f5f5dc; /* Бежевый цвет текста */
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,6 +107,7 @@ main {
     flex-direction: column;
     width: 80%;
     justify-content: space-between;
+    flex-grow: 1; /* Расширение main до заполнения доступного пространства */
 }
 
 .separator {
@@ -128,15 +129,51 @@ main {
     overflow: auto; /* Автоматическая прокрутка при переполнении */
 }
 
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на одном месте */
+    z-index: 1; /* Слой поверх всего */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включение прокрутки при необходимости */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #202020;
+    margin: 15% auto; /* 15% от верха и центрирование по горизонтали */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    color: #f5f5dc; /* Бежевый цвет текста */
+    animation: fadeIn 0.5s ease-in-out; /* Плавное появление модального окна */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 footer {
-    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+    background-color: transparent; /* Прозрачный фон */
     color: #f5f5dc; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     padding: 10px 0; /* Внутренние отступы */
     position: fixed; /* Фиксация внизу экрана */
     width: 100%; /* Ширина в 100% */
     bottom: 0; /* Позиционирование внизу */
-    z-index: 1; /* Обеспечение верхнего слоя для footer */
 }
 
 footer a {
@@ -149,29 +186,68 @@ footer a:hover {
 }
 
 /* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInBackground {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    from {
+        background-color: #000000;
+    }
+    to {
+        background-color: #000000;
+    }
 }
 
 @keyframes slideInFromTop {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounceIn {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-    0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
-    20% { transform: scale3d(1.1, 1.1, 1.1); }
-    40% { transform: scale3d(0.9, 0.9, 0.9); }
-    60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
-    80% { transform: scale3d(0.97, 0.97, 0.97); }
-    100% { opacity: 1; transform: scale3d(1, 1, 1); }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
 }
