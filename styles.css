@@ -4,23 +4,20 @@ body {
     background-color: #000000; /* Черный фон */
     color: #f5f5dc; /* Бежевый цвет текста */
     font-family: 'Comic Sans MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin: 0;
     background-image: url('background-image.png'); /* Добавление фонового изображения */
     background-size: cover; /* Масштабирование изображения по размеру окна */
     background-position: center; /* Центрирование изображения */
     background-repeat: no-repeat; /* Отключение повторения изображения */
+    animation: fadeInBackground 2s ease-in-out; /* Плавное появление фона */
+    margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
     animation: slideInFromTop 1s ease-in-out; /* Анимация появления заголовка сверху */
 }
@@ -28,7 +25,7 @@ header {
 .top-section {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 80%;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-in-out; /* Плавное появление верхней секции */
 }
@@ -87,8 +84,9 @@ select {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
-    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .separator {
@@ -152,10 +150,7 @@ footer {
     color: #f5f5dc; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     padding: 10px 0; /* Внутренние отступы */
-    position: fixed; /* Фиксация внизу экрана */
     width: 100%; /* Ширина равна ширине экрана */
-    bottom: 0; /* Позиционирование внизу */
-    z-index: 1; /* Обеспечение верхнего слоя для footer */
 }
 
 footer a {
