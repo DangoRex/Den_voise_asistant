@@ -147,8 +147,8 @@ main {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Ширина модального окна */
-    border-radius: 10px;
-    color: #f5f5dc;
+    color: #f5f5dc; /* Бежевый цвет текста */
+    animation: fadeIn 0.5s ease-in-out; /* Плавное появление модального окна */
 }
 
 .close {
@@ -166,7 +166,7 @@ main {
 }
 
 footer {
-    background-color: #202020; /* Цвет фона */
+    background-color: #000000; /* Черный цвет фона */
     color: #f5f5dc; /* Цвет текста */
     text-align: center; /* Центрирование текста */
     padding: 10px 0; /* Внутренние отступы */
