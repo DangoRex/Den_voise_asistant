@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
- 
+
 body {
     background-color: #000000; /* Черный фон */
     color: #f5f5dc; /* Бежевый цвет текста */
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-image: url('background-image.png'); /* Добавление фонового изображения */
+    background-image: url('images/background-image.png'); /* Добавление фонового изображения */
     background-size: cover; /* Масштабирование изображения по размеру окна */
     background-position: center; /* Центрирование изображения */
     animation: fadeInBackground 2s ease-in-out; /* Плавное появление фона */
@@ -34,54 +34,73 @@ header {
 }
 
 .logo {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    animation: bounceIn 2s ease-in-out; /* Анимация "прыжка" логотипа */
+    width: 200px; /* Увеличенный размер контейнера логотипа */
+    height: 200px;
+    border: 3px solid #202020; /* Цвет обводки логотипа */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Немного закругленные углы */
+    overflow: hidden; /* Скрытие выходящих за границы частей изображения */
+    animation: bounceIn 2s ease-in-out; /* Анимация появления логотипа с прыжком */
 }
 
 .logo img {
-    width: 100px; /* Ширина логотипа */
-    height: auto;
-    border-radius: 50%; /* Круглый логотип */
+    width: 100%;
+    height: 100%;
 }
 
 .description {
-    flex: 1;
-    animation: fadeIn 1.5s ease-in-out; /* Плавное появление описания */
+    margin-left: 20px;
+    animation: fadeIn 2s ease-in-out; /* Плавное появление описания */
 }
 
 .version-and-download {
     display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
     align-items: center;
+    width: 100%;
     margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-in-out; /* Плавное появление версии и кнопки */
 }
 
-.info-button,
+.version-and-download select {
+    background-color: #202020; /* Цвет фона списка версий */
+    color: #f5f5dc; /* Бежевый цвет текста */
+    border: 1px solid #444;
+    padding: 5px;
+    margin-left: 10px; /* Отступ слева от выпадающего списка */
+}
+
 .download-button {
-    background-color: #006400; /* Темно-зеленый цвет кнопки */
-    color: #f5f5dc; /* Бежевый цвет текста на кнопке */
+    background-color: #0050fa; /* Синий цвет кнопки */
+    color: #fff;
     border: none;
     padding: 10px 20px;
-    margin-right: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* Плавный переход цвета кнопки */
-    animation: fadeIn 2.5s ease-in-out; /* Плавное появление кнопки */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Отступ справа от кнопки */
 }
 
-.info-button:hover,
 .download-button:hover {
     background-color: #005500; /* Зеленый цвет кнопки при наведении */
 }
 
-select {
-    background-color: #006400; /* Темно-зеленый цвет выпадающего списка */
-    color: #f5f5dc; /* Бежевый цвет текста */
+.info-button {
+    background-color: #333333; /* Темный цвет кнопки */
+    color: #fff;
     border: none;
     padding: 10px;
-    border-radius: 5px;
     cursor: pointer;
-    animation: fadeIn 2.5s ease-in-out; /* Плавное появление выпадающего списка */
+    border-radius: 5px; /* Квадратная форма с немного закругленными углами */
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Отступ справа от кнопки */
+}
+
+.info-button:hover {
+    background-color: #005500; /* Зеленый цвет кнопки при наведении */
 }
 
 main {
@@ -145,26 +164,6 @@ main {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
-    color: #f5f5dc; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    padding: 10px 0; /* Внутренние отступы */
-    position: fixed; /* Фиксация внизу экрана */
-    width: 100%; /* Ширина в 100% */
-    bottom: 0; /* Позиционирование внизу */
-    z-index: 1; /* Обеспечение верхнего слоя для footer */
-}
-
-footer a {
-    color: #0050fa; /* Цвет ссылок */
-    text-decoration: none; /* Убрать подчеркивание */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
 /* Анимации */
