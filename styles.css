@@ -25,6 +25,25 @@ header {
     animation: slideInFromTop 1s ease-in-out; /* Анимация появления заголовка сверху */
 }
 
+footer {
+    background-color: #202020; /* Цвет фона */
+    color: #f5f5dc; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 10px 0; /* Внутренние отступы */
+    position: fixed; /* Фиксация внизу экрана */
+    width: 100%; /* Ширина в 100% */
+    bottom: 0; /* Позиционирование внизу */
+}
+
+footer a {
+    color: #0050fa; /* Цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
 .top-section {
     display: flex;
     align-items: center;
