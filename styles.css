@@ -53,7 +53,7 @@ header {
 .version-and-download {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрирование элементов */
+    justify-content: space-evenly; /* Равномерное распределение элементов */
     margin-bottom: 20px;
     width: 100%; /* Ширина контейнера для центровки */
 }
