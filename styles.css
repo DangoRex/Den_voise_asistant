@@ -53,18 +53,18 @@ header {
 .version-and-download {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрирование элементов */
     margin-bottom: 20px;
-    width: 100%; /* Ширина контейнера для центровки */
+    justify-content: flex-end; /* Выровнять элементы справа */
+    width: 100%; /* Ширина контейнера с кнопками */
 }
 
 .info-button,
 .download-button {
-    background-color: #006400; /* Темно-зеленый цвет кнопки */
+    background-color: #0000ff; /* Синий цвет кнопки */
     color: #f5f5dc; /* Бежевый цвет текста на кнопке */
     border: none;
     padding: 10px 20px;
-    margin: 0 10px; /* Добавляем margin со всех сторон для выравнивания */
+    margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s; /* Плавный переход цвета кнопки */
@@ -77,13 +77,12 @@ header {
 }
 
 select {
-    background-color: #006400; /* Темно-зеленый цвет выпадающего списка */
+    background-color: #0000ff; /* Синий цвет выпадающего списка */
     color: #f5f5dc; /* Бежевый цвет текста */
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px; /* Добавляем margin для выравнивания */
     animation: fadeIn 2.5s ease-in-out; /* Плавное появление выпадающего списка */
 }
 
