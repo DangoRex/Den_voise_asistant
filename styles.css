@@ -60,7 +60,7 @@ header {
 
 .info-button,
 .download-button {
-    background-color: #0000cc; /* Темно-синий цвет кнопки */
+    background-color: #000099; /* Темно-синий цвет кнопки */
     color: #f5f5dc; /* Бежевый цвет текста на кнопке */
     border: none;
     padding: 10px 20px;
