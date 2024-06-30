@@ -77,7 +77,7 @@ header {
 }
 
 select {
-    background-color: #0000cc; /* Темно-синий цвет выпадающего списка */
+    background-color: #000099; /* Темно-синий цвет выпадающего списка */
     color: #f5f5dc; /* Бежевый цвет текста */
     border: none;
     padding: 10px;
