@@ -21,14 +21,16 @@
     </header>
     <main>
         <div class="version-and-download">
-            <button class="info-button" onclick="showSystemRequirements()">?</button>
-            <select id="versionDropdown" onchange="updateVersionInfo()">
-                <option value="0.0.0">Выберите версию</option>
-                <option value="1.0.0">Версия 1.0.0</option>
-                <option value="1.1.0">Версия 1.1.0</option>
-                <option value="2.0.0">Версия 2.0.0</option>
-            </select>
-            <button class="download-button" onclick="download()">Скачать</button>
+            <div class="buttons-container">
+                <button class="info-button" onclick="showSystemRequirements()">?</button>
+                <select id="versionDropdown" onchange="updateVersionInfo()">
+                    <option value="0.0.0">Выберите версию</option>
+                    <option value="1.0.0">Версия 1.0.0</option>
+                    <option value="1.1.0">Версия 1.1.0</option>
+                    <option value="2.0.0">Версия 2.0.0</option>
+                </select>
+                <button class="download-button" onclick="download()">Скачать</button>
+            </div>
         </div>
         <div class="separator"></div>
         <div class="version-info" id="versionInfo">
